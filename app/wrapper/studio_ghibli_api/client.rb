@@ -10,6 +10,10 @@ module StudioGhibliApi
             send_get_request("/films/#{id}")
         end
 
+        def get_all_characters(params = {})
+            send_get_request("/people", params)
+        end
+
         private
 
         def send_get_request(path_to_resource, params={})

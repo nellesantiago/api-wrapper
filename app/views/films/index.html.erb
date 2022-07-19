@@ -1,5 +1,7 @@
 <% @films.each do |film|%>
   <%= link_to film_path(film["id"]) do %>
-    <%= film["title"] %>
+    <div><%= film["title"] %></div>
   <% end %>
 <% end %>
+
+<%= link_to "Characters", characters_path %>
