@@ -1,3 +1,7 @@
 <% @characters.each do |character| %>
-<div><%= character["name"]%> </div>
+  <div>
+    <%= link_to character_path(character["id"]) do %>
+      <%= character["name"]%>
+    <% end %>
+  </div>
 <% end %>

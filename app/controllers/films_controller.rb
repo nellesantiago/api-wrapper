@@ -2,7 +2,7 @@ class FilmsController < ApplicationController
     before_action :client
 
     def index
-        @films = client.get_all_films(take: 10)
+        @films = client.get_all_films
     end
 
     def show

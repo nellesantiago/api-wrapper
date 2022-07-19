@@ -14,6 +14,10 @@ module StudioGhibliApi
             send_get_request("/people", params)
         end
 
+        def get_character(id)
+            send_get_request("/people/#{id}")
+        end
+
         private
 
         def send_get_request(path_to_resource, params={})
