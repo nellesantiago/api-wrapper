@@ -26,6 +26,14 @@ module StudioGhibliApi
             send_get_request("/locations/#{id}")
         end
 
+        def get_all_species
+            send_get_request("/species")
+        end
+
+        def get_species(id)
+            send_get_request("/species/#{id}")
+        end
+
         private
 
         def send_get_request(path_to_resource, params={})
