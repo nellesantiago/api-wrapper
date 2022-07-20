@@ -7,6 +7,7 @@ class FilmsController < ApplicationController
 
     def show
         @film = client.get_film(params[:id])
+        @species = @film["species"].map { |species| JSON.parse(Faraday.get(species).body)}
     end
 
     private

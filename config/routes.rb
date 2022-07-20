@@ -4,4 +4,5 @@ Rails.application.routes.draw do
 
   resources :films, only: %i[index show]
   resources :characters, only: %i[index show]
+  resources :locations, only: %i[index show]
 end

@@ -1,0 +1,7 @@
+<% @locations.each do |location| %>
+  <div>
+    <%= link_to location_path(location["id"]) do %>
+      <%= location["name"]%>
+    <% end %>
+  </div>
+<% end %>

@@ -1,7 +1,8 @@
 <% @films.each do |film|%>
   <%= link_to film_path(film["id"]) do %>
+    <img src="<%= film["movie_banner"]%>" style="width:300px">
     <div><%= film["title"] %></div>
   <% end %>
 <% end %>
-
 <%= link_to "Characters", characters_path %>
+<%= link_to "Locations", locations_path %>

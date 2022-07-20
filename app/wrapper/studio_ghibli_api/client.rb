@@ -2,20 +2,28 @@ module StudioGhibliApi
     class Client
         BASE_URL = "https://ghibliapi.herokuapp.com".freeze
 
-        def get_all_films(params = {})
-            send_get_request("/films", params)
+        def get_all_films
+            send_get_request("/films")
         end
 
         def get_film(id)
             send_get_request("/films/#{id}")
         end
 
-        def get_all_characters(params = {})
-            send_get_request("/people", params)
+        def get_all_characters
+            send_get_request("/people")
         end
 
         def get_character(id)
             send_get_request("/people/#{id}")
+        end
+
+        def get_all_locations
+            send_get_request("/locations")
+        end
+
+        def get_location(id)
+            send_get_request("/locations/#{id}")
         end
 
         private
