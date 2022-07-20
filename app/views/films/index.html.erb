@@ -1,7 +1,46 @@
-<% @films.each do |film|%>
-  <%= link_to film_path(film["id"]) do %>
-    <img src="<%= film["movie_banner"]%>" style="width:300px">
-    <div><%= film["title"] %></div>
-  <% end %>
-<% end %>
+<div class="films">
+  <header>
+    <nav>
+      <%= render "layouts/logo" %>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li class="li">
+          <%= link_to "Films", films_path %>
+        </li>
+        <li>
+          <%= link_to "Characters", characters_path %>
+        </li>
+        <li>
+          <%= link_to "Locations", locations_path %>
+        </li>
+        <li>
+          <%= link_to "Species", species_index_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= image_tag "bg.jpg" %>
+    <div class="overlay">
+      <div class="container">
+        <% @films.each do |film| %>
+          <div class="list">
+            <img src="<%= film["movie_banner"]%>">
+            <div class="box">
+              <div class="title"><%= film["title"]%></div>
+            <div class="original-title"><%= film["original_title"]%> (<%= film["original_title_romanised"]%>)</div>
+              
+              
+              <div class="description"><%= film["description"]%></div>
 
+              <div class="release-date">Release Date: <%= film["release_date"]%></div>
+              
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </main>
+</div>

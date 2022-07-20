@@ -1,4 +1,30 @@
-<%= link_to "Films", films_path %>
-<%= link_to "Characters", characters_path %>
-<%= link_to "Locations", locations_path %>
-<%= link_to "Species", species_index_path %>
+<div class="home">
+<header>
+  <nav>
+    <%= render "layouts/logo" %>
+    <ul>
+      <li class="li">
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "Films", films_path %>
+      </li>
+      <li>
+        <%= link_to "Characters", characters_path %>
+      </li>
+      <li>
+        <%= link_to "Locations", locations_path %>
+      </li>
+      <li>
+        <%= link_to "Species", species_index_path %>
+      </li>
+    </ul>
+  </nav>
+</header>
+<main>
+<%= image_tag "bg.jpg" %>
+<div class="overlay"></div>
+
+
+</main>
+</div>
