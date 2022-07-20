@@ -86,13 +86,20 @@
             }
 
             .release-date {
-              font-size: 12px;
-              margin-top: 20px;
-              color: rgb(162, 162, 162);
+              margin-bottom: 20px;
             }
 
             .original-title {
-              margin-bottom: 20px;
+              margin-bottom: 10px;
+            }
+
+            .description {
+              width: 550px;
+              max-height: 98px;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-line-clamp: 5;
+              -webkit-box-orient: vertical;
             }
           }
         }
