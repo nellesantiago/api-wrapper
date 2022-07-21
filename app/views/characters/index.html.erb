@@ -1,7 +1,39 @@
-<% @characters.each do |character| %>
-  <div>
-    <%= link_to character_path(character["id"]) do %>
-      <%= character["name"]%>
-    <% end %>
-  </div>
-<% end %>
+<div class="characters">
+  <header>
+    <nav>
+      <%= render "layouts/logo" %>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "Films", films_path %>
+        </li>
+        <li class="li">
+          <%= link_to "Characters", characters_path %>
+        </li>
+        <li>
+          <%= link_to "Locations", locations_path %>
+        </li>
+        <li>
+          <%= link_to "Species", species_index_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= image_tag "bg.jpg" %>
+    <div class="overlay">
+      <div class="container">
+        <% @characters.each do |character| %>
+          <%= link_to "https://ghibli.fandom.com/wiki/#{character["name"]}", class: "list" do %>
+            <div class="box">
+              <%= image_tag character["name"] %>
+              <div class="name"><%= character["name"]%></div>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </main>
+</div>

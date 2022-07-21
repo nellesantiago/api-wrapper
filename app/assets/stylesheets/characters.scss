@@ -1,0 +1,108 @@
+.characters {
+  header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+
+      ul li,
+      a {
+        display: inline-flex;
+        list-style-type: none;
+        color: white;
+        margin-left: 40px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .li {
+        font-weight: 600;
+        transform: scale(1.2, 1.2);
+
+        &:hover {
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+
+  main {
+    img {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 200px;
+      overflow: scroll;
+
+      .container {
+        display: flex;
+        width: 1300px;
+        flex-wrap: wrap;
+
+        .list {
+          display: flex;
+          transition: 0.5s;
+          transition-delay: 0.1s;
+
+          &:hover {
+            transform: scale(2.5);
+            z-index: 4;
+          }
+
+          &:hover .name {
+            visibility: visible;
+          }
+
+          .box {
+            width: 87.5px;
+            height: 122.5px;
+            border-radius: 20px;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            cursor: -moz-zoom-in;
+            cursor: -webkit-zoom-in;
+            cursor: zoom-in;
+          }
+
+          img {
+            width: 87.5px;
+            height: 122.5px;
+            border-radius: 20px;
+          }
+
+          .name {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            font-size: 8px;
+            padding: 4px 7px;
+            overflow: hidden;
+            visibility: hidden;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
