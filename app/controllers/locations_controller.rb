@@ -2,7 +2,8 @@ class LocationsController < ApplicationController
     before_action :client
 
     def index
-        @locations = client.get_all_locations
+        @locations = client.get_all_locations(limit: 24)
+        @i = 1
     end
 
     def show

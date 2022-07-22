@@ -1,7 +1,38 @@
-<% @locations.each do |location| %>
-  <div>
-    <%= link_to location_path(location["id"]) do %>
-      <%= location["name"]%>
-    <% end %>
-  </div>
-<% end %>
+<div class="locations">
+  <header>
+    <nav>
+      <%= render "layouts/logo" %>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "Films", films_path %>
+        </li>
+        <li>
+          <%= link_to "Characters", characters_path %>
+        </li>
+        <li class="li">
+          <%= link_to "Locations", locations_path %>
+        </li>
+        <li>
+          <%= link_to "Species", species_index_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= image_tag "bg.jpg" %>
+    <div class="overlay">
+      <div class="container">
+        <div class="box">
+          <% @locations.each do |location| %>
+            <div class="slider" style="--i:<%= @i += 1 %>;"><%= image_tag location["name"] %>
+              <div class="details"><%= location["name"]%></div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

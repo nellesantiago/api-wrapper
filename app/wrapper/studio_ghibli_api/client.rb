@@ -18,8 +18,8 @@ module StudioGhibliApi
             send_get_request("/people/#{id}")
         end
 
-        def get_all_locations
-            send_get_request("/locations")
+        def get_all_locations(params = {})
+            send_get_request("/locations", params)
         end
 
         def get_location(id)
