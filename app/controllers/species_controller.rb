@@ -2,7 +2,7 @@ class SpeciesController < ApplicationController
     before_action :client
 
     def index
-        @all_species = client.get_all_species
+        @all_species = client.get_all_species(limit: 6)
     end
 
     def show

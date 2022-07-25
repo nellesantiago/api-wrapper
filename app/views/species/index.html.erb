@@ -1,7 +1,42 @@
-<% @all_species.each do |species| %>
-  <div>
-    <%= link_to species_path(species["id"]) do %>
-      <%= species["name"]%>
-    <% end %>
-  </div>
-<% end %>
+<div class="species">
+  <header>
+    <nav>
+      <%= render "layouts/logo" %>
+      <ul>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "Films", films_path %>
+        </li>
+        <li>
+          <%= link_to "Characters", characters_path %>
+        </li>
+        <li>
+          <%= link_to "Locations", locations_path %>
+        </li>
+        <li class="li">
+          <%= link_to "Species", species_index_path %>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <%= image_tag "bg.jpg" %>
+    <div class="overlay">
+      <div class="container">
+        <% @all_species.each do |species| %>
+          <%= link_to "https://ghibli.fandom.com/wiki/#{species["name"]}", class: "list" do %>
+            <%= image_tag species["name"]%>
+            <div class="box">
+              <div class="title"><%= species["name"]%></div>
+              <span>NAME</span>
+              <div class="classification"><%= species["classification"]%></div>
+              <span>CLASSIFICATION</span>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </main>
+</div>

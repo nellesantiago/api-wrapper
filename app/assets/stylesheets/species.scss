@@ -1,0 +1,106 @@
+.species {
+  header {
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    z-index: 2;
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 100px;
+
+      ul li,
+      a {
+        display: inline-flex;
+        list-style-type: none;
+        color: white;
+        margin-left: 40px;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      .li {
+        font-weight: 600;
+        transform: scale(1.2, 1.2);
+
+        &:hover {
+          transform: scale(1.2, 1.2);
+        }
+      }
+    }
+  }
+
+  main {
+    img {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.7);
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 140px 200px;
+      overflow: scroll;
+      justify-content: center;
+      align-items: center;
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row: 1fr 1fr 1fr;
+        margin-top: 20px;
+
+        .list {
+          width: 300px;
+          height: 300px;
+          margin: 20px;
+          position: relative;
+          border-radius: 50%;
+          overflow: hidden;
+
+          &:hover .box {
+            display: flex;
+          }
+
+          img {
+            width: 300px;
+            height: 300px;
+          }
+
+          .box {
+            position: absolute;
+            color: white;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            font-weight: 600;
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 100%;
+            width: 100%;
+            font-size: 25px;
+            flex-direction: column;
+
+            span {
+              font-size: 9px;
+              margin: 10px 0 20px;
+              color: grey;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
