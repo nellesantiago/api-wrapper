@@ -23,7 +23,15 @@
 </header>
 <main>
 <%= image_tag "bg.jpg" %>
-<div class="overlay"></div>
+<div class="overlay">
+  <div class="container">
+    <%= render "layouts/ghibli" %>
+    <div class="description">Studio Ghibli Inc. (Japanese: 株式会社スタジオジブリ, Hepburn: Kabushiki-gaisha Sutajio Jiburi) is a Japanese animation film studio headquartered in Koganei, Tokyo. It is best known for its animated feature films, and has also produced several short subjects, television commercials, and two television films. Its mascot and most recognizable symbol is a character named Totoro, a giant spirit inspired by raccoon dogs (tanuki) and cats from the 1988 anime film My Neighbor Totoro. Among the studio's highest-grossing films are Spirited Away (2001), Howl's Moving Castle (2004) and Ponyo (2008). The studio was founded on June 15, 1985, by directors Hayao Miyazaki and Isao Takahata and producer Toshio Suzuki, after the successful performance of Topcraft's Nausicaä of the Valley of the Wind (1984). It has also collaborated with video game studios on the visual development of several games.</div>
+    <%= link_to "https://www.netflix.com/search?q=studio%20ghibli", class: "button" do %>
+      <%= image_tag "play.png" %> Watch on Netflix
+    <% end %>
+  </div>
+</div>
 <%= video_tag "ghibli.mov", controls: false, autoplay: true, loop: :loop, muted: true, autobuffer: true, poster: false%>
 
 
