@@ -6,32 +6,16 @@ module StudioGhibliApi
             send_get_request("/films")
         end
 
-        def get_film(id)
-            send_get_request("/films/#{id}")
-        end
-
         def get_all_characters(params = {})
             send_get_request("/people", params)
-        end
-
-        def get_character(id)
-            send_get_request("/people/#{id}")
         end
 
         def get_all_locations(params = {})
             send_get_request("/locations", params)
         end
 
-        def get_location(id)
-            send_get_request("/locations/#{id}")
-        end
-
         def get_all_species(params = {})
             send_get_request("/species", params)
-        end
-
-        def get_species(id)
-            send_get_request("/species/#{id}")
         end
 
         private
